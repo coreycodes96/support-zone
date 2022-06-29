@@ -12,8 +12,6 @@ const ShowGroups = () => {
         user,
     } = useShowGroups();
 
-    console.log(user);
-
     return (
         <>
             {!loading ? (
