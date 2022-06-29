@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getLocalStorage, updateLocalStorage } from '../utils/localStorage/index';
 
 export const api = () => {
-    const BASE_URL = process.env.REACT_APP_ENV === "development" ? 'http://192.168.1.113:5000/' : 'https://support-zone-backend.herokuapp.com'
+    const BASE_URL = process.env.REACT_APP_ENV === "development" ? 'http://192.168.1.113:5000' : 'https://support-zone-backend.herokuapp.com'
 
     const request = axios.create({
         baseURL: BASE_URL,
