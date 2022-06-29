@@ -54,7 +54,7 @@ const useLogin = (navigate) => {
 
             api().post("/api/account/login", data)
                 .then(res => {
-                    if (isMounted) setUser({ ...res.data });
+                    if (isMounted) setUser(JSON.stringify(res.data));
                     if (isMounted) createLocalStorage('user', JSON.stringify(res.data));
                     if (isMounted) setLoading(false);
                     if (isMounted) navigate("/groups");

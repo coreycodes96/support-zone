@@ -10,7 +10,7 @@ const LikePost = ({ postId, likes }) => {
 
     return (
         <>
-            {likes.includes(user?._id) ? (
+            {likes.includes(JSON.parse(user)._id) ? (
                 <button onClick={() => handleLikePost()}>
                     <FontAwesomeIcon icon={faHeartBroken} className="mr-1 text-red-600" />
                     <span>{likes?.length}</span>

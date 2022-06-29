@@ -12,6 +12,8 @@ const ShowGroups = () => {
         user,
     } = useShowGroups();
 
+    console.log(user);
+
     return (
         <>
             {!loading ? (
@@ -19,7 +21,7 @@ const ShowGroups = () => {
                     {groups.length > 0 ? groups.map(group => (
                         <div key={group._id} className="relative my-10 p-5 w-full bg-white shadow-md shadow-gray-300 text-gray-800 rounded">
 
-                            {user?._id === group?.user?._id && (
+                            {JSON.parse(user)._id === group?.user?._id && (
                                 <div className="p-2 absolute top-2 right-2 bg-purple-500 text-sm text-white rounded-xl">
                                     <p>created</p>
                                 </div>
@@ -28,7 +30,7 @@ const ShowGroups = () => {
                             <p>{group?.title}</p>
                             <p>joined users {group?.joined?.length}</p>
 
-                            {group?.joined?.includes(user?._id) ? (
+                            {group?.joined?.includes(JSON.parse(user)._id) ? (
                                 <Link to={`/group/${group?._id}`}>
                                     <FontAwesomeIcon className="mt-5" icon={faDoorOpen} />
                                 </Link>

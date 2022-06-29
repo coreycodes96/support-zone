@@ -1,7 +1,9 @@
 export const getLocalStorage = (key) => {
     const storage = localStorage.getItem(key);
 
-    return storage;
+    const newLocalStorage = storage !== null ? JSON.parse(storage) : null;
+
+    return newLocalStorage;
 }
 
 export const createLocalStorage = (key, value) => {
