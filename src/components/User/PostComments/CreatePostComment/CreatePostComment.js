@@ -45,7 +45,7 @@ const CreatePostComment = ({ postId }) => {
                     </div>
 
                     <div className="mt-8 w-full">
-                        <button disabled={loading} onClick={() => createAComment()} className="p-3 text-white bg-purple-600 rounded">Create Post {loading && <FontAwesomeIcon icon={faSpinner} className="ml-1 animate-spin" />}</button>
+                        <button disabled={loading} onClick={() => createAComment()} className="p-3 text-white bg-purple-600 rounded">Create Comment {loading && <FontAwesomeIcon icon={faSpinner} className="ml-1 animate-spin" />}</button>
                     </div>
                 </div>
             </motion.div>
